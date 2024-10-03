@@ -20,7 +20,7 @@ win-install:
 
 # Run
 run-mac:
-	$(GCC) $(NCURSES_FLAG) $(SQLITE_FLAG) $(OBJS) -o $(NAME_OUT); $(NAME_OUT)
+	$(GCC) $(VERSION_FLAG) $(NCURSES_FLAG) $(SQLITE_FLAG) $(OBJS) -o $(NAME_OUT); $(NAME_OUT)
 
 run-linux:
 	# To be updated!

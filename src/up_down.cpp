@@ -613,7 +613,7 @@ public:
     {
         if(!this->connectDB()) return false;
 
-        sql = "CREATE TABLE UP_DOWN("  \
+        const char* sql = "CREATE TABLE UP_DOWN("  \
             "id         INT PRIMARY KEY     NOT NULL," \
             "level      CHAR(50)," \
             "score      INT   NOT NULL," \
@@ -635,7 +635,7 @@ public:
     {
         if(!this->connectDB()) return;
 
-        sql = "INSERT INTO UP_DOWN (id,level,score) "  \
+        const char* sql = "INSERT INTO UP_DOWN (id,level,score) "  \
             "VALUES (1, 'Easy', 0); " \
             "INSERT INTO UP_DOWN (id,level,score) "  \
             "VALUES (2, 'Normal', 0); "     \
@@ -657,7 +657,7 @@ public:
 
         this->onClearList();
 
-        sql = "SELECT * FROM UP_DOWN";
+        const char* sql = "SELECT * FROM UP_DOWN";
 
         result = sqlite3_exec(db, sql, callback, (void*)data, &errorMessage);
         
@@ -725,6 +725,8 @@ public:
             case LEVEL_INDEX::HARD:
                 return LEVEL_TITLE::HARD;
         }
+
+        return LEVEL_TITLE::NORMAL;
     }
 
     static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
