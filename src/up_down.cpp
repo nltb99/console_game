@@ -24,6 +24,13 @@
  * 
  */ 
 
+
+/* 
+ * Colors
+ * https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/color.html
+ */ 
+
+
 #include <iostream>
 #include <stdlib.h>
 #include <vector>
@@ -527,8 +534,13 @@ public:
 
     void update()
     {    
+        // * Init Color
+        init_pair(COLOR_YELLOW, COLOR_YELLOW, COLOR_BLACK);
+        
         // * Render 
+        attron(COLOR_PAIR(COLOR_YELLOW));
         mvwaddch(stdscr, posY, posX, chr);
+        attroff(COLOR_PAIR(COLOR_YELLOW));
 
         // * Reverse direction Y
         if(posY + (1 * velocityY) + 1 < THRESHOLD || (posY + 1 > g_screenHeight - THRESHOLD)){
@@ -1124,7 +1136,8 @@ private:
 
 int main(int argc, const char * argv[]) 
 {
-    initscr();			
+    initscr();	
+    start_color();		
     cbreak();
     noecho();
     keypad(stdscr, TRUE);
