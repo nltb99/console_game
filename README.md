@@ -1,11 +1,13 @@
 # Up-Down Game
 
-![Game Screenshot](assets/game.png)
+![Game Screenshot](assets/menu_game.gif)
+
+![Game Screenshot](assets/gameplay.gif)
 
 ## Introduction
 
 This console game was inspired by "I wanna be the Boshy" created by developer Jesper "Solgryn" Erlandsen.
-Due to an issue with the ncurses library, there was a slight flicker delay in CMD on Windows.
+Due to an issue with the ncurses library, there is a slight flicker delay in Terminal on macOS and CMD on Windows.
 
 ## Platforms
 
