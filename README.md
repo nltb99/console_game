@@ -63,6 +63,7 @@ make run-mac
 - [ ] Add more types of obstacles
 - [ ] Refactor and clean up code
 - [ ] Update README.md
+- [ ] Add a global ranking score instead of a local one (SQLite -> Redis?,...)
 
 ```console
 
