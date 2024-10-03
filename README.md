@@ -1,8 +1,8 @@
 # Up-Down Game
 
-![Game Screenshot](assets/menu_game.gif)
+![Menu Game](assets/menu_game.gif)
 
-![Game Screenshot](assets/gameplay.gif)
+![Gameplay](assets/gameplay.gif)
 
 ## Introduction
 
