@@ -1,80 +1,87 @@
-# A simple console game, implemented using ncurses library.
+# Up-Down Game
 
-[![Game](assets/game.png "Game")]()
+![Game Screenshot](assets/game.png)
 
 ## Introduction
 
-This game was inspired by "I wanna be the Boshy" created by developer Jesper "Solgryn" Erlandsen. 
-
-For some reason, there was some flicker delay in some Terminal/CMD. Hope you guys find it pleasing.
+This console game was inspired by "I wanna be the Boshy" created by developer Jesper "Solgryn" Erlandsen.
+Due to an issue with the ncurses library, there was a slight flicker delay in CMD on Windows.
 
 ## Platforms
 
-1. Mac OS X
-2. Windows
+- MacOS X
+- Windows
 
-## Controls:
+## Controls
 
-- __Up-Arrow__ to go up.
-- __Down-Arrow__ to go down.
-- __Left-Arrow__ to go left.
-- __Right-Arrow__ to go right.
-- __q__ to exit game. 
+- **Up-Arrow**: Move up
+- **Down-Arrow**: Move down
+- **Left-Arrow**: Move left
+- **Right-Arrow**: Move right
+- **q**: Quit game
 
-## Installing
+## Installation
 
-### macOS
+### MacOS
 
-    brew tap nltb99/up_down && brew install up_down
+```shell
+brew tap nltb99/up_down
+brew install up_down
+```
 
 ### Windows
 
-    NOT YET
-    
-#### Run
+> TODO: To be updated!
 
-    up_down
+### Run
 
+```shell
+up_down
+```
 
+## Building from Source
 
-## Building from source
+### Prerequisites
 
-### Building master
+- C compiler
+- ncurses library
 
-1. Install dependencies:
-    * macOS:
+### MacOS
 
-            brew install ncurses gcc
+```shell
+make mac-install
+make run-mac
+```
 
+### Windows
 
-            
-2. Run the game:
+> TODO: To be updated!
 
-   On MacOS:
+## TODO
 
-        make runmac
-
-
-
+- [x] Add [ncurses colors](https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/color.html) for the Player(x)
+- [ ] Add more types of obstacles
+- [ ] Refactor and clean up code
+- [ ] Update README.md
 
 ```console
-                                                                                                       
-                                               bbbbbbbb                                                
-                  lllllll         tttt         b::::::b               999999999          999999999     
-                  l:::::l      ttt:::t         b::::::b             99:::::::::99      99:::::::::99   
-                  l:::::l      t:::::t         b::::::b           99:::::::::::::99  99:::::::::::::99 
+
+                                               bbbbbbbb
+                  lllllll         tttt         b::::::b               999999999          999999999
+                  l:::::l      ttt:::t         b::::::b             99:::::::::99      99:::::::::99
+                  l:::::l      t:::::t         b::::::b           99:::::::::::::99  99:::::::::::::99
                   l:::::l      t:::::t          b:::::b          9::::::99999::::::99::::::99999::::::9
 nnnn  nnnnnnnn     l::::lttttttt:::::ttttttt    b:::::bbbbbbbbb  9:::::9     9:::::99:::::9     9:::::9
 n:::nn::::::::nn   l::::lt:::::::::::::::::t    b::::::::::::::bb9:::::9     9:::::99:::::9     9:::::9
 n::::::::::::::nn  l::::lt:::::::::::::::::t    b::::::::::::::::b9:::::99999::::::9 9:::::99999::::::9
 nn:::::::::::::::n l::::ltttttt:::::::tttttt    b:::::bbbbb:::::::b99::::::::::::::9  99::::::::::::::9
-  n:::::nnnn:::::n l::::l      t:::::t          b:::::b    b::::::b  99999::::::::9     99999::::::::9 
-  n::::n    n::::n l::::l      t:::::t          b:::::b     b:::::b       9::::::9           9::::::9  
-  n::::n    n::::n l::::l      t:::::t          b:::::b     b:::::b      9::::::9           9::::::9   
-  n::::n    n::::n l::::l      t:::::t    ttttttb:::::b     b:::::b     9::::::9           9::::::9    
-  n::::n    n::::nl::::::l     t::::::tttt:::::tb:::::bbbbbb::::::b    9::::::9           9::::::9     
-  n::::n    n::::nl::::::l     tt::::::::::::::tb::::::::::::::::b    9::::::9           9::::::9      
-  n::::n    n::::nl::::::l       tt:::::::::::ttb:::::::::::::::b    9::::::9           9::::::9       
-  nnnnnn    nnnnnnllllllll         ttttttttttt  bbbbbbbbbbbbbbbb    99999999           99999999        
-                                                                                                      
+  n:::::nnnn:::::n l::::l      t:::::t          b:::::b    b::::::b  99999::::::::9     99999::::::::9
+  n::::n    n::::n l::::l      t:::::t          b:::::b     b:::::b       9::::::9           9::::::9
+  n::::n    n::::n l::::l      t:::::t          b:::::b     b:::::b      9::::::9           9::::::9
+  n::::n    n::::n l::::l      t:::::t    ttttttb:::::b     b:::::b     9::::::9           9::::::9
+  n::::n    n::::nl::::::l     t::::::tttt:::::tb:::::bbbbbb::::::b    9::::::9           9::::::9
+  n::::n    n::::nl::::::l     tt::::::::::::::tb::::::::::::::::b    9::::::9           9::::::9
+  n::::n    n::::nl::::::l       tt:::::::::::ttb:::::::::::::::b    9::::::9           9::::::9
+  nnnnnn    nnnnnnllllllll         ttttttttttt  bbbbbbbbbbbbbbbb    99999999           99999999
+
 ```
