@@ -57,7 +57,23 @@ make run-mac
 
 ### Windows
 
-> TODO: To be updated!
+```shell
+make win-install
+make run-win
+```
+
+## Building a .tar.gz Archive
+
+```shell
+# Create the .tar.gz archive:
+tar -czvf ./src/up_down.tar.gz ./src/up_down
+
+# Verify the archive
+tar -tzvf ./src/up_down.tar.gz
+
+# To get the SHA256 checksum of the .tar.gz file
+shasum -a 256 ./src/up_down.tar.gz
+```
 
 ## TODO
 
